@@ -1,193 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arik Einstein</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="menu">
+    <header>
+        <nav id="navbar">
+            <ul>
 <li><a href="#about">About Me</a></li>
 <li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
+                <li><a href="#playlist">My PlayList</a></li>
 <li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
+                <li><a href="#qrcode">QR Code</a></li>
+                <li><a href="#qa">Q&A</a></li>
 <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <h3>Arik Einstein</h3>
+            <p>3 January 1939 – 26 November 2013
+                was an Israeli singer, actor, comedian and screenwriter. He was a pioneer of Israeli rock music and was named "the voice of Israel." Through both high public and critical acclaim, Einstein is regarded as one of the greatest, most popular, and most influential Israeli artists of all time. 
+                An illustrious musical career that spanned over 50 years saw Einstein recording over 500 songs and releasing, collaborating, and featuring in 34 albums, far more than any other Israeli musician. Through the years he collaborated with many well-known Israeli singers and songwriters, including Shalom Hanoch[8] Miki Gavrielov, Yoni Rechter, and Shmulik Kraus. Einstein wrote many of his own songs and was a vocalist with The Churchills, Batzal Yarok and The High Windows. Einstein was also part of, and wrote songs for the Hashomer Hatzair youth movement.
+                </p>
+        </section>
+
+        <section id="photos">
+            <h2>My Photos</h2>
+            <div id="gallery">
+        
+                <!-- Radio buttons for each image -->
+                <input type="radio" id="img1Radio" name="gallery-control" class="gallery-control" checked>
+                <input type="radio" id="img2Radio" name="gallery-control" class="gallery-control">
+                <input type="radio" id="img3Radio" name="gallery-control" class="gallery-control">
+                <input type="radio" id="img4Radio" name="gallery-control" class="gallery-control">
+                <input type="radio" id="img5Radio" name="gallery-control" class="gallery-control">
+                <input type="radio" id="img6Radio" name="gallery-control" class="gallery-control">
+                <input type="radio" id="img7Radio" name="gallery-control" class="gallery-control">
+        
+                <!-- Image 1 -->
+                <div class="gallery-item">
+                    <label for="img7Radio" class="prev">&#10094;</label>
+                    <label for="img2Radio" class="next">&#10095;</label>
+                    <img src="images/photo1.jpg" alt="Image 1">
+                </div>
+        
+                <!-- Image 2 -->
+                <div class="gallery-item">
+                    <label for="img1Radio" class="prev">&#10094;</label>
+                    <label for="img3Radio" class="next">&#10095;</label>
+                    <img src="images/photo2.jpg" alt="Image 2">
+                </div>
+        
+                <!-- Image 3 -->
+                <div class="gallery-item">
+                    <label for="img2Radio" class="prev">&#10094;</label>
+                    <label for="img4Radio" class="next">&#10095;</label>
+                    <img src="images/photo3.jpg" alt="Image 3">
+                </div>
+        
+                <!-- Image 4 -->
+                <div class="gallery-item">
+                    <label for="img3Radio" class="prev">&#10094;</label>
+                    <label for="img5Radio" class="next">&#10095;</label>
+                    <img src="images/photo4.jpg" alt="Image 4">
+                </div>
+        
+                <!-- Image 5 -->
+                <div class="gallery-item">
+                    <label for="img4Radio" class="prev">&#10094;</label>
+                    <label for="img6Radio" class="next">&#10095;</label>
+                    <img src="images/photo5.jpg" alt="Image 5">
+                </div>
+        
+                <!-- Image 6 -->
+                <div class="gallery-item">
+                    <label for="img5Radio" class="prev">&#10094;</label>
+                    <label for="img7Radio" class="next">&#10095;</label>
+                    <img src="images/photo6.jpg" alt="Image 6">
 </div>
 		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
+                <!-- Image 7 -->
+                <div class="gallery-item">
+                    <label for="img6Radio" class="prev">&#10094;</label>
+                    <label for="img1Radio" class="next">&#10095;</label>
+                    <img src="images/photo7.jpg" alt="Image 7">
+                </div>
+        
+            </div>
 </section>
 
-<section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
+        <section id="playlist">
+            <h2>My Playlist</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vKJvaI5JdcM?si=GslHjce7FA3xybOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>         </section>
+
+        <section id="like">
+            <h2>Like</h2>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDFA5gIeWXxQ%26ab_channel%3D%25D7%2590%25D7%25A8%25D7%2599%25D7%25A7%25D7%2590%25D7%2599%25D7%2599%25D7%25A0%25D7%25A9%25D7%2598%25D7%2599%25D7%2599%25D7%259F%257CNMC&width=450&layout&action&size&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 </section>
 
-<section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
+        <section id="qrcode">
+            <h2>QR Code</h2>
+            <img src="images/qr-code.jpg" alt="QR Code" class="qr-image">
+            
 </section>
 
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+        <section id="qa">
+            <h2>Q&A</h2>
+            <p><strong>Q: Differences between Web1, Web2, and Web3:</strong></p>
+            <p><strong>A:</strong> Web1, Web2, and Web3 are like three different generations of the internet.</p>
+            <p>Web1 was all about simple, static websites where you could only read information - kind of like reading a book online. There was no way to interact or contribute content.</p>
+            <p>Web2, which is the internet most of us use today. It's interactive, so you can comment, like, share, and even create your own content on platforms like Facebook, YouTube, and Instagram. However, in Web2, big companies keep and control most of the data, which raises privacy concerns.</p>
+            <p>Web3 aims to fix these issues by using blockchain technology to make the internet decentralized. This means no single entity controls the data; instead, users own and control their information. Web3 is also smarter, using AI to make more personalized and intelligent interactions possible.</p>
+
+            <p><strong>Q: Examples for the differences between Web1, Web2, and Web3:</strong></p>
+            <p><strong>Web1:</strong> In Web1, searching for "Aspirin" would lead you to static web pages, like an online encyclopedia entry. These pages provide basic information about Aspirin, including its uses, side effects, and dosage, but you can't interact with the content or see what other users think.</p>
+            <p><strong>Web2:</strong> In Web2, searching for "Aspirin" becomes more interactive. You might land on a site like WebMD, where you can read articles, check user reviews, and participate in health forums. Here, you can see how others have reacted to Aspirin, ask questions, and share your own experiences.</p>
+            <p><strong>Web3:</strong> In Web3, searching for "Aspirin" involves a decentralized platform where information about the medicine is user-controlled and verified via blockchain. You can access personalized data, contribute to or view community-driven research, and have discussions in a secure and private manner, with full control over your own data.</p>
+
 </section>
 
-<section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
-</section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="mailto:example@example.com" method="post" enctype="text/plain">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+        
+                <label for="smiley">Choose a Smiley:</label>
+                <select id="smiley" name="smiley">
+                    <option value=":)">:)</option>
+                    <option value=":(">:(</option>
+                    <option value=":D">:D</option>
+                    <option value=":O">:O</option>
+                </select>        
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    </main>
 
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
-</section>
-
-
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
 </body>
 </html>

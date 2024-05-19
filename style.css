@@ -1,7 +1,279 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+/* General body and box sizing setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Main content styling */
+main {
+    padding: 10px;
+    margin-top: 50px; /* Make sure there's space for the fixed header */
+}
+
+/* Header and navigation styling */
+header {
+    background-color: #0044cc; /* Navy blue background for the header */
+    color: white;
+    font-size: 1em;
+    width: 100%;
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the header is above other content */
+}
+
+nav#navbar {
+    display: flex;
+    justify-content: center; /* Center the navigation bar content */
+    padding: 10px 0; /* Vertical padding */
+}
+
+nav#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width */
+}
+
+nav#navbar ul li {
+    margin: 0 20px; /* Space between the menu items */
+}
+
+nav#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Padding to make the links easier to click */
+    transition: background-color 0.3s;
+}
+
+nav#navbar ul li a:hover {
+    background-color: #002266; /* Darker blue background on hover */
+}
+
+/* Section styling for content */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333; /* Dark footer background */
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* About Me Section Styling */
+#about {
+    background-color: #f9f9f9;  /* Light background for the section */
+    padding: 20px;              /* Padding around the text */
+    border-radius: 8px;         /* Rounded corners for the section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow around the section */
+    line-height: 1.6;           /* Spacing between lines */
+    font-family: 'Arial', sans-serif; /* Font family */
+}
+
+#about h2 {
+    color: #333;               /* Dark color for headings */
+    margin-bottom: 10px;       /* Space below the heading */
+    text-align: center;
+}
+
+
+#playlist {
+    background-color: #f0f0f0;  /* Light grey background */
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* Center align the section title */
+}
+
+#playlist iframe {
+    max-width: 80%; /* Limiting the width to 80% of the container */
+    border-radius: 8px; /* Rounded corners for the iframe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#qrcode {
+    text-align: center; /* Center align the section title */
+}
+
+#qrcode img {
+    width: 50%; /* Takes 50% of the #qrcode section width */
+    max-width: 200px; /* Maximum width to avoid overly large display */
+    height: auto; /* Keeps the aspect ratio intact */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Shadow for depth */
+}
+
+#like {
+    text-align: center; /* Center align the section title */
+}
+
+/* Photos section */
+#photos {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#gallery {
+    width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hide the radio buttons */
+.gallery-control {
+    display: none;
+}
+
+/* General styling for gallery items */
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Show the gallery item associated with the checked radio button */
+#img1Radio:checked ~ .gallery-item:nth-of-type(1),
+#img2Radio:checked ~ .gallery-item:nth-of-type(2),
+#img3Radio:checked ~ .gallery-item:nth-of-type(3),
+#img4Radio:checked ~ .gallery-item:nth-of-type(4),
+#img5Radio:checked ~ .gallery-item:nth-of-type(5),
+#img6Radio:checked ~ .gallery-item:nth-of-type(6),
+#img7Radio:checked ~ .gallery-item:nth-of-type(7) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gallery-item img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* QA */
+#qa h2 {
+    color: #333;               /* Dark color for headings */
+    margin-bottom: 10px;       /* Space below the heading */
+    text-align: center;
+}
+
+/* contact */
+
+#contact {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+#contact form {
+    margin-top: 20px;
+}
+
+#contact label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#contact input[type="email"], #contact textarea, #contact select {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contact input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0;
 }
